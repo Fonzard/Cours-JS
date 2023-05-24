@@ -27,21 +27,18 @@ console.log(mod(42,2));
 // EXERCICE 2
 
 function askUserFirstNumber(){
-    let firstNumber = parseFloat(prompt("Quels nombres souhaites tu utiliser en premier ?"));
-    return firstNumber;
+    return parseInt(prompt("Quels nombres souhaites tu utiliser en premier ?"));
 }
 function askUserSecondNumber(){
-    let secondNumber = parseFloat(prompt("Quels nombres souhaites tu utiliser en deuxième ?"));
-    return secondNumber;
+    return parseInt(prompt("Quels nombres souhaites tu utiliser en deuxième ?"));
 }
  function askUserOperation(){
-    let operation = prompt("Quelles opérations souhaites tu utiliser ?");
-    return operation;
+    return prompt("Quelles opérations souhaites tu utiliser ?");
 }
 
 //EXERCICE 3
-let operationChoisie = askUserOperation();
 let firstChoice = askUserFirstNumber();
+let operationChoisie = askUserOperation();
 let secondChoice = askUserSecondNumber();
 let result
 
