@@ -1,0 +1,55 @@
+@import "libs/_reset.scss";
+body
+{
+    background-color: grey;
+    header 
+    {
+        width:100%;
+        menu
+        {
+            display:flex;
+            align-items:center;
+            
+            h2
+            {
+                margin:1em;
+                
+            }
+            input[type="number"]
+            {
+                width:5vw;
+            }
+            button
+            {
+                border:none;
+                background-color: grey;
+                
+                i
+                {
+                    font-size: 1.5em;
+                    margin-left:1em;
+                }
+            }
+        }
+    }
+    #scene 
+    {
+        border-collapse:collapse;
+        background-color: white;
+        width:100vw;
+        
+        tr
+        {
+            td
+            {
+                border: 1px dashed grey;
+                width:100px;
+                height:100px;
+            }
+            .selected
+            {
+            
+            }
+        }    
+    } 
+}  

@@ -229,6 +229,3 @@ body > main > section table tbody tr td:last-of-type button {
     border:2px solid #b50604;
     border-radius: 0.3rem;
 }
-.down_visible {
-    display:block;
-}

@@ -17,8 +17,8 @@ function exercice1()
         }
         else 
         {
-        box.style.backgroundColor = "red";
-        etatCarre = "red";
+            box.style.backgroundColor = "red";
+            etatCarre = "red";
         }
 });
 }

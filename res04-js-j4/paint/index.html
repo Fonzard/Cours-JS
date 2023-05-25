@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>JS Paint</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/style/css/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/style/css/style.css">
+        <link rel="stylesheet" href="assets/js/index.js">
+    </head>
+    <body>
+        <header>
+            <menu>
+                <h2>Couleur</h2>
+                    <input type="color" id="color-picker"/>
+                <h2>Lignes</h2>
+                    <input type="number" name="lignes" id="indexRows" oninput="addRowsAndColumns()" />
+                <h2>Colonnes</h2>
+                    <input type="number" name="Colonnes" id="indexColumns" oninput="addRowsAndColumns()"/>
+                    <button id="eraserBtn" onclick="toggleEraser()"><i class="bi bi-eraser-fill"></i></button>
+            </menu>
+        </header>
+        <main>
+           <table id="scene">
+
+           </table>
+        </main>
+        <script type="application/javascript" src="assets/js/index.js"></script>
+    </body>
+</html>
