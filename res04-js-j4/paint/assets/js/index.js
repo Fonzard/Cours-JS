@@ -35,6 +35,8 @@
     let gridContainer = document.getElementById("scene");
     let cells = document.querySelectorAll("td");
     
+    
+    // Changer la création du tableau par celle d'un grid !!!!
     function addRowsAndColumns()
     {
         // Permet de recupérer les valeur du input 
@@ -69,8 +71,10 @@
                         
                         // Ajoute la couleur du picker au cellule
                         cell.style.background = colorP.value;
+                        //Ajoute les couleurs à l'historique Map()
+                        colorHistory.set(cell, cell.style.backgroundColor);
                         
-                        //Gomme déclare les BC white à toute les cells colorées une fois cliqué dessus 
+                        //Gomme déclare les BColor white à toute les cells colorées une fois cliqué dessus 
                         if (isEraserSelected)
                         {   
                             cell.style.backgroundColor = "white";
@@ -89,6 +93,23 @@
                     {
                         cell.classList.add("selected");
                         cell.style.background = colorP.value;
+                        colorHistory.set(cell, cell.style.backgroundColor);
+                    }
+                });
+                //permet au movemove d'effacer
+                cell.addEventListener("mousemove", function() 
+                {
+                    if (isMouseDown) 
+                    {
+        
+                        if (isEraserSelected) 
+                        {
+                            cell.style.backgroundColor = "";
+                        } 
+                        else if (selectedColor !== "") 
+                        {
+                            cell.style.backgroundColor = selectedColor;
+                        }
                     }
                 });
             }
@@ -131,6 +152,35 @@
         isMouseDown = false;
     });
 
+//////////////////////////////////////////////////////////////////////// 
+ 	// UNDO Paint Faire un btn inverse. Et tenter de faire apparaitre le btn que s'il y a un historique 
+	
+	  let colorHistory = new Map();
+    
+    function undoColor()
+    {
+	 		// Vérifie si l'historique à des étapes précédentes
+        if (colorHistory.size > 0)
+        {	
+		  		//Récupère la dernière cellule dnas l'historique
+            let cell =[... colorHistory.keys()].pop();
+				
+				//Récupère la couleur précédente de la cellule
+            let previousColor = colorHistory.get(cell);
+				
+				//Restaure la case précédente 
+				cell.style.backgroundColor = previousColor;
+				
+				//Supprime la cellule de l'historique 
+				colorHistory.delete(cell);
+        }
+        
+    }
+	let undoBtn = document.getElementById("undoBtn");
+    undoBtn.addEventListener("click", function()
+    {
+        undoColor();
+    });
 ////////////////////////////////////////////////////////////////////////    
 window.addEventListener("DOMContentLoaded", function()
 {

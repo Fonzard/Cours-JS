@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation Formulaire</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+    <body>
+        <main>
+            <form id="container" method="get">
+                <h1>Formulaire</h1>
+                <label for="lastname">LastName</label>
+                <input type="text" name="lastName" id="lastName" >
+                <label for="firstname">FirstName</label>
+                <input type="text" name="firstName" id="firstName" >
+                <label for="nickname">NickName</label>
+                <input type="text" name="nickName" id="nickName">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required="required">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <label for="confirmPawssword">ConfirmPassword</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required> 
+                <label for="bio">Biography</label>
+                <input type="textarea" name="bio" id="bio" required="required">
+                
+                <button type="submit" id="btn">cliquer cliquer !!!!!</button>
+            </form>
+        </main>
+        <script type="module" src="assets/js/index.js"></script>
+    </body>
+</html>

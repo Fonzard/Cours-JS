@@ -29,31 +29,34 @@ setTimeout(function ()
     console.log(times[0]);
     setTimeout(function()
     {
-       console.log(times[1]);
-       setTimeout(function()
-       {
+      console.log(times[1]);
+      setTimeout(function()
+      {
           console.log(times[2]); 
-       }, times[1] * 1000);
-    },times[0] * 1000);
-},0);
+      }, times[2] * 1000);
+    },times[1] * 1000);
+},times[0] * 1000);
 
 //EXERCICE 4
 
 let numbers = [32,43,56,24,78,42];
 let decompteIndex = 0;
- 
+
+
 function decompte()
 {
         if (decompteIndex < numbers.length)
         {
-        console.log(numbers[decompteIndex]);
-        decompteIndex++;
+            console.log(numbers[decompteIndex]);
+            decompteIndex++;
         }
         else
         {
-            clearTimeout(intervalId);
+            clearInterval(intervalId);
+            console.log("ça continue")
         }
 }
+
 let intervalId = setInterval(decompte,1000)
 
 

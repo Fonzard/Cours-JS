@@ -106,9 +106,10 @@ let users = [
     }  
 ];
 
-let tbody = document.querySelector("main > section table tbody");
+let tbody = document.querySelector("body > main > section table tbody");
 
-    for (user of users){
+    for (user of users)
+    {
         let tr = document.createElement("tr");
         let tdId = document.createElement("td");
         let txtId = document.createTextNode(user.id);
@@ -129,7 +130,17 @@ let tbody = document.querySelector("main > section table tbody");
         let txtActive = document.createTextNode(user.isActive);
     // Lier les états true et false au icone person fill up et person fill down
     // Chopper les icone sur bootstrap
+        if (user.isActive === true)
+        {
+            txtActive.classList.add("bi-person-fill-up");
+        }
+        else
+        {
+            txtActive.classList.add("bi-person-fill-down");
+        }
         
+        tdActive.appendChild(txtActive);
+        tr.appendChild(tdActive);
     }
 
 window.addEventListener("DOMContentLoaded", function(){

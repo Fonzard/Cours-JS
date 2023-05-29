@@ -13,11 +13,18 @@ body
             h2
             {
                 margin:1em;
+                color:#efece5;
                 
+            }
+            input[type="color"]
+            {
+                border-radius:5px;
             }
             input[type="number"]
             {
                 width:5vw;
+                border-radius:3px;
+                overflow:auto;
             }
             button
             {
@@ -28,6 +35,23 @@ body
                 {
                     font-size: 1.5em;
                     margin-left:1em;
+                    color:#efece5;
+                }
+            }
+            #eraserBtn
+            {
+                i:hover
+                {
+                    opacity:0.8;
+                    color:red;
+                }
+            }
+            #undoBtn
+            {
+                i:hover
+                {
+                    opacity:0.8;
+                    color:blue;
                 }
             }
         }

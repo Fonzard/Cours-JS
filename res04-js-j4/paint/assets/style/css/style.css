@@ -64,9 +64,15 @@ body header menu {
 }
 body header menu h2 {
   margin: 1em;
+  color: #efece5;
+}
+body header menu input[type=color] {
+  border-radius: 5px;
 }
 body header menu input[type=number] {
   width: 5vw;
+  border-radius: 3px;
+  overflow: auto;
 }
 body header menu button {
   border: none;
@@ -75,6 +81,15 @@ body header menu button {
 body header menu button i {
   font-size: 1.5em;
   margin-left: 1em;
+  color: #efece5;
+}
+body header menu #eraserBtn i:hover {
+  opacity: 0.8;
+  color: red;
+}
+body header menu #undoBtn i:hover {
+  opacity: 0.8;
+  color: blue;
 }
 body #scene {
   border-collapse: collapse;
