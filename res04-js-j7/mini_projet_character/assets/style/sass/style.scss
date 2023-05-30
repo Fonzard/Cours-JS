@@ -1,0 +1,70 @@
+@import "libs/_reset.scss";
+
+body {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  width:100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 70vw 30vw;
+  grid-template-rows: 100vh;
+}
+
+.sr-only {
+  display: none;
+}
+
+main {
+  background-image: url("../../img/figure.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 25vw 20vw 25vw;
+
+  & > section {
+    &.helmet {
+      background-image: url("../../img/helmet.png");
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position: top;
+    }
+
+    &.shield {
+      background-image: url("../../img/shield.png");
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position-y: 45%;
+      background-position-x: right;
+    }
+
+    &.sword {
+      background-image: url("../../img/sword.png");
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position-y: 25%;
+      background-position-x: left;
+    }
+
+    &.axe {
+      background-image: url("../../img/axe.png");
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position-y: 25%;
+      background-position-x: left;
+    }
+  }
+}
+
+aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+
+  button {
+    img {
+      width:100%;
+    }
+  }
+}
+
