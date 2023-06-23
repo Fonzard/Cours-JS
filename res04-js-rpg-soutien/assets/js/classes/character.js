@@ -1,11 +1,13 @@
-const box = document.getElementById("id")
+
 class Character {  
     #posX;
     #posY;
+    #hasAxe;
     
     constructor(){
         this.#posX = 19;
         this.#posY = 15;
+        this.#hasAxe = false;
 
     }
     get posX(){
@@ -21,28 +23,39 @@ class Character {
         this.#posY = newPosY;
     }
     moveUp(){ // Peut être While
-        if((this.#posY -1)>= 0 && !box.classList.contains("water")){
-            this.#posY -= 1;
-            this.render();
+        if((this.#posY -1)>= 0){
+            let targetCell = document.querySelector(`.row-${this.#posY - 1}.col-${this.#posX}`)
+            if(godMode || !targetCell.classList.contains("water") && !targetCell.classList.contains("rock") && !targetCell.classList.contains("stump") && !targetCell.classList.contains("tree")){
+                this.#posY -= 1;
+                this.render();
+            }
         }
     }
     moveDown(){
         if((this.#posY + 1) <= 19) {
-            
-            this.#posY +=1,
-            this.render();
+            let targetCell = document.querySelector(`.row-${this.#posY + 1}.col-${this.#posX}`)
+            if(godMode || !targetCell.classList.contains("water") && !targetCell.classList.contains("rock") && !targetCell.classList.contains("stump") && !targetCell.classList.contains("tree")){
+                this.#posY +=1,
+                this.render();
+            }
         }
     }
     moveLeft(){
         if((this.#posX -1) >= 0){
-            this.#posX -= 1;
-            this.render();
+            let targetCell = document.querySelector(`.row-${this.#posY}.col-${this.#posX - 1}`)
+            if(godMode || !targetCell.classList.contains("water") && !targetCell.classList.contains("rock") && !targetCell.classList.contains("stump") && !targetCell.classList.contains("tree")){
+                this.#posX -= 1;
+                this.render();
+            }
         }
     }
     moveRight(){
         if((this.#posX + 1) <= 29){
-            this.#posX += 1;
-            this.render();
+            let targetCell = document.querySelector(`.row-${this.#posY}.col-${this.#posX + 1}`)
+            if(godMode || !targetCell.classList.contains("water") && !targetCell.classList.contains("rock") && !targetCell.classList.contains("stump") && !targetCell.classList.contains("tree")){
+                this.#posX += 1;
+                this.render();
+            }
         }
     }
     render(){
@@ -53,10 +66,49 @@ class Character {
         }
         let box = document.querySelector(`.row-${this.posY}.col-${this.posX}`);
         box.classList.add("character");
-        
-        
+    }
+    pickUpAxe() {
+        this.#hasAxe = true;
+        console.log('The character picked up an axe!');
+        // Effectuer d'autres actions nécessaires, comme mettre à jour l'interface utilisateur
+    }
+    function isTreeCell(posX, posY) {
+        // Vérifiez si la case aux coordonnées (posX, posY) contient un arbre
+        // Retournez true si c'est le cas, sinon false
+    }
+    function removeTree(posX, posY) {
+        // Supprimez l'arbre de la case aux coordonnées (posX, posY)
+        // Par exemple, en retirant la classe CSS correspondante de la case
+    }
+  
+}
+/*function isCellOccupied(row, col) {
+
+  for (const object of objects) {
+    if (object.posX === col && object.posY === row) {
+      return true; 
+    }
+  }
+  return false; 
+}*/
+let godMode = false;
+function enableGodMod(){
+    godMode = true;
+    console.log("God Mode activated !!!");
+}
+function disableGodMode(){
+    godMode = false;
+    console.log("God Mode desactivated !!!")
+}
+document.addEventListener('keydown', (event) => {
+if (event.key === "o"){
+    if(godMode){
+        disableGodMode();
+    }
+    else{
+        enableGodMod();
     }
 }
-
-
+});
 export { Character };
+
