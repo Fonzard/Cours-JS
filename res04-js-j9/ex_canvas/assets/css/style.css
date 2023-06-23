@@ -1,0 +1,33 @@
+/*.container*/
+/*{*/
+/*    display:grid;*/
+/*    grid-templates-columns:(1fr);*/
+/*    grid-templates-area:*/
+/*    "exercice1 exercice2 exercice3"*/
+/*    "exercice3 exercice4 exercice5";*/
+    
+/*}*/
+/*section */
+/*{*/
+/*    border:1px solid black;*/
+/*}*/
+/*.ex1*/
+/*{*/
+/*    grid-area:exercice1;*/
+/*}*/
+/*.ex1*/
+/*{*/
+/*    grid-area:exercice2;*/
+/*}*/
+/*.ex1*/
+/*{*/
+/*    grid-area:exercice3;*/
+/*}*/
+/*.ex1*/
+/*{*/
+/*    grid-area:exercice4;*/
+/*}*/
+/*.ex1*/
+/*{*/
+/*    grid-area:exercice5;*/
+/*}*/

@@ -19,8 +19,8 @@
         //Enregistrement de la couleur choisi dans le stockage de la session
         sessionStorage.setItem("autosave", colorP.value)
         isEraserSelected = false;
-        let eraserBtn = document.getElementById("eraserBtn");
-        eraserBtn.style.color = "";
+        // let eraserBtn = document.getElementById("eraserBtn");
+        // eraserBtn.style.color = "";
     });
     
     let color = sessionStorage.getItem(colorP.value);

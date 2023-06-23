@@ -56,24 +56,28 @@ body
             }
         }
     }
-    #scene 
+    main
     {
-        border-collapse:collapse;
-        background-color: white;
-        width:100vw;
         
-        tr
+        #scene 
         {
-            td
-            {
-                border: 1px dashed grey;
-                width:100px;
-                height:100px;
-            }
-            .selected
-            {
+            border-collapse:collapse;
+            background-color: white;
+            width:100vw;
             
-            }
-        }    
-    } 
+            tr
+            {
+                td
+                {
+                    border: 1px dashed grey;
+                    width:100px;
+                    height:100px;
+                }
+                .selected
+                {
+                
+                }
+            }    
+        }
+    }
 }  
