@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+body .topHeader {
+  display: flex;
+  align-item: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: rgb(7, 59, 76);
+}
+body .topHeader .logo img {
+  width: 100px;
+  height: 100px;
+}
+body .topHeader nav {
+  display: flex;
+  gap: 10px;
+}
+body .topHeader button {
+  border: none;
+  background-color: rgb(7, 59, 76);
+  color: white;
+}
+body .topHeader button:hover {
+  color: rgb(255, 209, 102);
+  text-decoration: underline;
+}
+body main .mainHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../images/home-books.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+body main .mainHeader h1 {
+  margin-bottom: 0px;
+  color: white;
+}
+body main .mainHeader h2 {
+  margin-top: 0px;
+  color: white;
+}
+body main .mainHeader .buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+body main .mainHeader .buttonContainer button:first-child {
+  background-color: rgb(239, 71, 111);
+  color: white;
+}
+body main .mainHeader .buttonContainer button:last-child {
+  background-color: rgb(6, 214, 160);
+}
+body main .mainHeader .buttonContainer button {
+  border: none;
+  border-radius: 5px;
+  width: 140px;
+  height: 30px;
+  text-transform: uppercase;
+}
+body main .center {
+  display: flex;
+  justify-content: center;
+}
+body main .center h3 {
+  margin-bottom: 20px;
+}
+body main .center h3 .underline {
+  border-bottom: 5px solid rgb(239, 71, 111);
+  text-align: center;
+}
+body main #bookCollection {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(524.5px - 33.33% - 20px);
+  text-align: center;
+  margin-top: 1em;
+}
+body main #bookCollection .book-item {
+  width: calc(33.33% - 20px);
+  padding-bottom: 1em;
+}
+body main #bookCollection .book-item img {
+  height: 260px;
+}
+body main #bookCollection .book-item h4 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+body main #bookCollection .book-item h5 {
+  text-transform: uppercase;
+  color: rgb(17, 138, 178);
+  margin: 0;
+}
+body main #bookCollection .book-item p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+body main #bookCollection .book-item button {
+  height: 30px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(17, 138, 178);
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+body main .btnCollection {
+  background-color: rgb(239, 71, 111);
+  color: white;
+  text-transform: uppercase;
+  width: 250px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8em;
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */

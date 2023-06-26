@@ -22,7 +22,7 @@ class Character {
     set posY(newPosY){
         this.#posY = newPosY;
     }
-    moveUp(){ // Peut être While
+    moveUp(){ 
         if((this.#posY -1)>= 0){
             let targetCell = document.querySelector(`.row-${this.#posY - 1}.col-${this.#posX}`)
             if(godMode || !targetCell.classList.contains("water") && !targetCell.classList.contains("rock") && !targetCell.classList.contains("stump") && !targetCell.classList.contains("tree")){
@@ -67,7 +67,7 @@ class Character {
         let box = document.querySelector(`.row-${this.posY}.col-${this.posX}`);
         box.classList.add("character");
     }
-    pickUpAxe() {
+/*    pickUpAxe() {
         this.#hasAxe = true;
         console.log('The character picked up an axe!');
         // Effectuer d'autres actions nécessaires, comme mettre à jour l'interface utilisateur
@@ -79,7 +79,7 @@ class Character {
     function removeTree(posX, posY) {
         // Supprimez l'arbre de la case aux coordonnées (posX, posY)
         // Par exemple, en retirant la classe CSS correspondante de la case
-    }
+    }*/
   
 }
 /*function isCellOccupied(row, col) {

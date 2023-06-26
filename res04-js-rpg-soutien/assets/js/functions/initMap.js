@@ -1,6 +1,5 @@
 import { map } from "../data/game-map.js";
 import { objects} from "../data/game-objects.js";
-import { Character } from "../classes/character.js";
 import loadFloors from "./loadFloors.js";
 import loadObjects from "./loadObjects.js";
 export default function initMap(rows = 20, cols = 30){
